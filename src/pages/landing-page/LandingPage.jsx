@@ -1,61 +1,58 @@
 import React from "react";
+import styles from "./LandingPage.module.css";
+
+import pandaFace from "/src/assets/images/판다 얼굴.png";
+import pandaLogo from "/src/assets/images/판다마켓.png";
+import introImage from "/src/assets/images/img_home_top.png";
+import homeImage1 from "/src/assets/images/Img_home_01.png";
+import homeImage2 from "/src/assets/images/Img_home_02.png";
+import homeImage3 from "/src/assets/images/Img_home_03.png";
+import homeImage4 from "/src/assets/images/Img_home_bottom.png";
 
 const LandingPage = () => {
   return (
     <div>
-      <nav class="gnb">
-        <div class="container">
-          <a href="./" class="logo">
-            <img
-              src="images/판다 얼굴.png"
-              alt="logo imge"
-              class="logo-image"
-            />
-            <img src="images/판다마켓.png" alt="logo text" class="logo-text" />
+      <nav class={styles.gnb}>
+        <div class={styles.container}>
+          <a href="./" class={styles.logo}>
+            <img src={pandaFace} alt="logo imge" class={styles.logoImage} />
+            <img src={pandaLogo} alt="logo text" class={styles.logoText} />
           </a>
-          <a href="./html/login.html" class="login-button">
-            <div>로그인</div>
+          <a href="./html/login.html" class={styles.loginButton}>
+            <div class={styles.loginText}>로그인</div>
           </a>
         </div>
       </nav>
 
       <main>
-        <section class="intro-section">
-          <div class="container">
-            <div class="intro-text-and-button">
-              <h1 class="intro-text big-text">
+        <section class={styles.introSection}>
+          <div class={styles.container}>
+            <div class={styles.introTextAndButton}>
+              <h1 class={styles.introText}>
                 일상의 모든 물건을
                 <br />
                 거래해 보세요
               </h1>
-              <a class="cta" href="./html/items.html">
+              <a class={styles.cta} href="./html/items.html">
                 <div>구경하러 가기</div>
               </a>
             </div>
-            <img
-              src="images/img_home_top.png"
-              alt="intro image"
-              class="intro-image"
-            />
+            <img src={introImage} alt="intro image" class={styles.introImage} />
           </div>
         </section>
 
-        <section class="main-section">
-          <div class="container">
-            <img
-              src="images/Img_home_01.png"
-              alt="home image 1"
-              class="home-image"
-            />
-            <div class="slogan">
-              <div class="summation-text">Hot item</div>
-              <div class="slogan-text-container">
-                <h2 class="big-text">
+        <section class={styles.mainSection}>
+          <div class={styles.container}>
+            <img src={homeImage1} alt="home image 1" class={styles.homeImage} />
+            <div class={styles.slogan}>
+              <div class={styles.summationText}>Hot item</div>
+              <div class={styles.sloganTextContainer}>
+                <h2 class={styles.bigText}>
                   인기 상품을
                   <br />
                   확인해 보세요
                 </h2>
-                <p class="description">
+                <p class={styles.description}>
                   가장 HOT한 중고거래 물품을
                   <br />
                   판다 마켓에서 확인해 보세요
@@ -65,47 +62,44 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section class="main-section">
-          <div class="container">
-            <div class="slogan">
-              <div class="summation-text text-align-right">Search</div>
-              <div class="slogan-text-container text-align-right">
-                <h2 class="big-text">
+        <section class={styles.mainSection}>
+          <div class={styles.container}>
+            <div class={styles.slogan}>
+              <div class={styles.summationText} style={{ textAlign: "right" }}>
+                Search
+              </div>
+              <div
+                class={styles.sloganTextContainer}
+                style={{ textAlign: "right" }}
+              >
+                <h2 class={styles.bigText}>
                   구매를 원하는
                   <br />
                   상품을 검색하세요
                 </h2>
-                <p class="description">
+                <p class={styles.description}>
                   구매하고 싶은 물품은 검색해서
                   <br />
                   쉽게 찾아보세요
                 </p>
               </div>
             </div>
-            <img
-              src="images/Img_home_02.png"
-              alt="home image 2"
-              class="home-image"
-            />
+            <img src={homeImage2} alt="home image 2" class={styles.homeImage} />
           </div>
         </section>
 
-        <section class="main-section">
-          <div class="container">
-            <img
-              src="images/Img_home_03.png"
-              alt="home image 3"
-              class="home-image"
-            />
-            <div class="slogan">
-              <div class="summation-text">Register</div>
-              <div class="slogan-text-container">
-                <h2 class="big-text">
+        <section class={styles.mainSection}>
+          <div class={styles.container}>
+            <img src={homeImage3} alt="home image 3" class={styles.homeImage} />
+            <div class={styles.slogan}>
+              <div class={styles.summationText}>Register</div>
+              <div class={styles.sloganTextContainer}>
+                <h2 class={styles.bigText}>
                   판매를 원하는
                   <br />
                   상품을 등록하세요
                 </h2>
-                <p class="description">
+                <p class={styles.description}>
                   어떤 물건이든 판매하고 싶은 상품을
                   <br />
                   쉽게 등록하세요
@@ -115,81 +109,17 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section class="outro-section">
-          <div class="container">
-            <h2 class="outro-text big-text">
+        <section class={styles.outroSection}>
+          <div class={styles.container}>
+            <h2 class={styles.outroText}>
               믿을 수 있는
               <br />
               판다마켓 중고 거래
             </h2>
-            <img
-              src="images/Img_home_bottom.png"
-              alt="intro image"
-              class="intro-image"
-            />
+            <img src={homeImage4} alt="intro image" class={styles.introImage} />
           </div>
         </section>
       </main>
-
-      <footer class="footer">
-        <div class="container">
-          <div class="since-text">@codeit - 2024</div>
-          <div class="privacy-and-faq">
-            <a class="privacy-policy" href="./html/privacy.html">
-              Privacy Policy
-            </a>
-            <a class="faq" href="./html/faq.html">
-              FAQ
-            </a>
-          </div>
-          <div class="sns-images">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ic_facebook.png"
-                alt="facebook icon"
-                class="sns-icon"
-              />
-            </a>
-            <a
-              href="https://www.x.com"
-              target="_blank"
-              rel="nooopener noreferrer"
-            >
-              <img
-                src="images/ic_twitter.png"
-                alt="twitter icon"
-                class="sns-icon"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ic_instagram.png"
-                alt="instagram icon"
-                class="sns-icon"
-              />
-            </a>
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ic_youtube.png"
-                alt="youtube icon"
-                class="sns-icon"
-              />
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

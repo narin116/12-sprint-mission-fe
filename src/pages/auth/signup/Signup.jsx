@@ -1,18 +1,26 @@
 import React from "react";
+import styles from "../auth.module.css";
+
+import btnVisibilityOff from "/src/assets/images/login/btn_visibility_off_24px.png";
+import btnVisibilityOn from "/src/assets/images/login/btn_visibility_on_24px.svg";
+import pandaFace from "/src/assets/images/login/판다 얼굴.png";
+import pandaLogo from "/src/assets/images/login/판다마켓.png";
+import googleLogo from "/src/assets/images/login/google.png";
+import kakaotalkLogo from "/src/assets/images/login/kakaotalk.png";
 
 const Signup = () => {
   return (
     <div>
-      <main class="login-main">
-        <div class="login-container">
-          <a class="login-logo-container" href="./">
-            <img src="../images/login/판다 얼굴.png" alt="판다 로고 얼굴" />
-            <img src="../images/login/판다마켓.png" alt="판다 로고 글씨" />
+      <main class={styles.loginMain}>
+        <div class={styles.loginContainer}>
+          <a class={styles.loginLogoContainer} href="./">
+            <img src={pandaFace} alt="판다 로고 얼굴" />
+            <img src={pandaLogo} alt="판다 로고 글씨" />
           </a>
-          <div class="content-container">
-            <form class="login-form" action="/submit" method="POST">
-              <div class="input-container">
-                <div class="email-container">
+          <div class={styles.contentContainer}>
+            <form class={styles.loginForm} action="/submit" method="POST">
+              <div class={styles.inputContainer}>
+                <div class={styles.emailContainer}>
                   <label for="email">이메일</label>
                   <input
                     type="email"
@@ -22,7 +30,7 @@ const Signup = () => {
                     required
                   />
                 </div>
-                <div class="nickname-container">
+                <div class={styles.nicknameContainer}>
                   <label for="nickname">닉네임</label>
                   <input
                     type="text"
@@ -32,9 +40,9 @@ const Signup = () => {
                     required
                   />
                 </div>
-                <div class="password-container">
+                <div class={styles.passwordContainer}>
                   <label for="password">비밀번호</label>
-                  <div class="password-input-container">
+                  <div class={styles.passwordInputContainer}>
                     <input
                       type="password"
                       id="password"
@@ -42,19 +50,13 @@ const Signup = () => {
                       placeholder="비밀번호를 입력해주세요"
                       required
                     />
-                    <img
-                      class="invisible-icon"
-                      src="../images/login/btn_visibility_off_24px.png"
-                    />
-                    <img
-                      class="visible-icon"
-                      src="../images/login/btn_visibility_on_24px.svg"
-                    />
+                    <img class={styles.invisibleIcon} src={btnVisibilityOff} />
+                    <img class={styles.visibleIcon} src={btnVisibilityOn} />
                   </div>
                 </div>
-                <div class="password-check-container">
+                <div class={styles.passwordCheckContainer}>
                   <label for="password-check">비밀번호 확인</label>
-                  <div class="password-input-container">
+                  <div class={styles.passwordInputContainer}>
                     <input
                       type="password"
                       id="password-check"
@@ -62,55 +64,43 @@ const Signup = () => {
                       placeholder="비밀번호를 다시 한 번 입력해주세요"
                       required
                     />
-                    <img
-                      class="invisible-icon"
-                      src="../images/login/btn_visibility_off_24px.png"
-                    />
-                    <img
-                      class="visible-icon"
-                      src="../images/login/btn_visibility_on_24px.svg"
-                    />
+                    <img class={styles.invisibleIcon} src={btnVisibilityOff} />
+                    <img class={styles.visibleIcon} src={btnVisibilityOn} />
                   </div>
                 </div>
               </div>
 
-              <button class="login-button" type="submit">
-                <div class="login-text">회원가입</div>
+              <button class={styles.loginButton} type="submit">
+                <div class={styles.loginText}>회원가입</div>
               </button>
             </form>
-            <div class="easy-login">
-              <div class="easy-login-container">
-                <div class="easy-login-text">간편 로그인하기</div>
-                <div class="sns-img-container">
+            <div class={styles.easyLogin}>
+              <div class={styles.easyLoginContainer}>
+                <div class={styles.easyLoginText}>간편 로그인하기</div>
+                <div class={styles.snsImgContainer}>
                   <a
-                    class="google"
+                    class={styles.google}
                     href="https://www.google.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="../images/login/google.png"
-                      alt="google logo image"
-                    />
+                    <img src={googleLogo} alt="google logo image" />
                   </a>
                   <a
-                    class="kakaotalk"
+                    class={styles.kakaotalk}
                     href="https://www.kakaocorp.com/page/"
-                    targer="_blank"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="../images/login/kakaotalk.png"
-                      alt="kakaotalk logo image"
-                    />
+                    <img src={kakaotalkLogo} alt="kakaotalk logo image" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="ask-login-signup-container">
-              <span class="ask-text">이미 회원이신가요?</span>
-              <a class="login-signup-link" href="./login.html">
+            <div class={styles.askLoginSignupContainer}>
+              <span class={styles.askText}>이미 회원이신가요?</span>
+              <a class={styles.loginSignupLink} href="./login.html">
                 로그인
               </a>
             </div>
