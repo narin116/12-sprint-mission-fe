@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
+import { Link } from "react-router-dom";
 
 import pandaFace from "/src/assets/images/판다 얼굴.png";
 import pandaLogo from "/src/assets/images/판다마켓.png";
@@ -14,13 +15,13 @@ const LandingPage = () => {
     <div>
       <nav class={styles.gnb}>
         <div class={styles.container}>
-          <a href="./" class={styles.logo}>
+          <Link class={styles.logo} to="/">
             <img src={pandaFace} alt="logo imge" class={styles.logoImage} />
             <img src={pandaLogo} alt="logo text" class={styles.logoText} />
-          </a>
-          <a href="./html/login.html" class={styles.loginButton}>
+          </Link>
+          <Link to="/auth/login" class={styles.loginButton}>
             <div class={styles.loginText}>로그인</div>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -33,9 +34,9 @@ const LandingPage = () => {
                 <br />
                 거래해 보세요
               </h1>
-              <a class={styles.cta} href="./html/items.html">
+              <Link to="/items" class={styles.cta}>
                 <div>구경하러 가기</div>
-              </a>
+              </Link>
             </div>
             <img src={introImage} alt="intro image" class={styles.introImage} />
           </div>

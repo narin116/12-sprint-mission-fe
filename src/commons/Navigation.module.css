@@ -1,0 +1,16 @@
+.option {
+  padding: 21px 15px;
+
+  color: var(--secondary-color-gray600);
+  text-align: center;
+
+  /* pretendard/2lg-18px-bold */
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 144.444% */
+}
+.navActive {
+  color: #3692ff;
+}

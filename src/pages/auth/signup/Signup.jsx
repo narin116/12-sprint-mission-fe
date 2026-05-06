@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../auth.module.css";
+import { Link } from "react-router-dom";
 
 import btnVisibilityOff from "/src/assets/images/login/btn_visibility_off_24px.png";
 import btnVisibilityOn from "/src/assets/images/login/btn_visibility_on_24px.svg";
@@ -13,10 +14,10 @@ const Signup = () => {
     <div>
       <main class={styles.loginMain}>
         <div class={styles.loginContainer}>
-          <a class={styles.loginLogoContainer} href="./">
+          <Link to="/" class={styles.loginLogoContainer}>
             <img src={pandaFace} alt="판다 로고 얼굴" />
             <img src={pandaLogo} alt="판다 로고 글씨" />
-          </a>
+          </Link>
           <div class={styles.contentContainer}>
             <form class={styles.loginForm} action="/submit" method="POST">
               <div class={styles.inputContainer}>
@@ -100,9 +101,9 @@ const Signup = () => {
 
             <div class={styles.askLoginSignupContainer}>
               <span class={styles.askText}>이미 회원이신가요?</span>
-              <a class={styles.loginSignupLink} href="./login.html">
+              <Link to="/auth/login" class={styles.loginSignupLink}>
                 로그인
-              </a>
+              </Link>
             </div>
           </div>
         </div>
