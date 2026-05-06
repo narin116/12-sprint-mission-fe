@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "./product-components/ProductCard";
-import BestProducts from "./product-components/BestProducts";
-import ProductsOnSale from "./product-components/ProductsOnSale";
+import ProductCard from "./components/ProductCard";
+import BestProducts from "./components/BestProducts";
+import ProductsOnSale from "./components/ProductsOnSale";
 
 const PcProducts = () => {
   const pCol = 5;

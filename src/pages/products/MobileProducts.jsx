@@ -1,6 +1,6 @@
 import React from "react";
-import BestProducts from "./product-components/BestProducts";
-import ProductsOnSale from "./product-components/ProductsOnSale";
+import BestProducts from "./components/BestProducts";
+import ProductsOnSale from "./components/ProductsOnSale";
 
 const MobileProducts = () => {
   const pCol = 2;
