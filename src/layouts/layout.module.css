@@ -1,0 +1,8 @@
+/*footer를 바닥에 붙여두기 위해*/
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+  justify-content: space-between;
+}

@@ -12,7 +12,9 @@ const ProductsHeader = ({ orderBy, setOrderBy, keyword, setKeyword }) => {
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
         />
-        <Link className="new-product-btn">상품 등록하기</Link>
+        <Link to="/registeration" className="new-product-btn">
+          상품 등록하기
+        </Link>
         <select
           className="order-by-selector"
           value={orderBy}

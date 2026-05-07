@@ -393,51 +393,9 @@ html의 class명만 추가해주면 되니까 더 코드 작성량이 적어지�
   color: var(--Secondary-100, #f9fafb);
 }
 
-/* footer 스타일 */
-.footer {
-  background-color: var(--secondary-color-gray900);
-
-  height: 160px;
-  padding: 32px 0;
-}
-
-.footer .container {
-  width: 100%;
-  height: 100%;
-  padding: 0 200px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.since-text {
-  color: var(--secondary-color-gray400);
-  font-size: 1rem;
-  font-weight: 400;
-  flex-shrink: 0;
-}
-
-.privacy-and-faq {
-  color: var(--secondary-color-gray200);
-  font-size: 1rem;
-  font-weight: 400;
-
-  display: flex;
-  gap: 1.875rem;
-  flex-shrink: 0;
-}
-
-.sns-images {
-  height: 1.125rem; /*width는 내용물 크기에 맞춰 자동으로 설정되도록 함.*/
-  display: flex;
-  gap: 0.75rem;
-}
-
 /*media query를 쓰자*/
 @media (min-width: 1920px) {
-  .gnb .container,
-  .footer .container {
+  .gnb .container {
     max-width: 1920px;
     margin: 0 auto; /*1920px보다 커졌을 때 가운데 정렬을 위해*/
   }

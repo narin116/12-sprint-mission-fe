@@ -8,7 +8,7 @@ const BestProducts = ({ bCol }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:4000/products?_sort=-favoriteCount`,
+        `http://localhost:3000/products?_sort=-favoriteCount`,
       );
       const data = await response.json();
       setBestProducts(data);

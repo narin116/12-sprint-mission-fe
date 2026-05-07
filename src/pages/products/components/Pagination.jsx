@@ -10,7 +10,7 @@ const Pagination = ({ page, pageSize, setPage, setPageSize }) => {
   useEffect(() => {
     const fetchData = async () => {
       console.log("pageNum 가져오는중");
-      const response = await fetch("http://localhost:4000/totalCount");
+      const response = await fetch("http://localhost:3000/totalCount");
       const result = await response.json();
       console.log("result", result);
       const addAPage = result % pageSize > 0 ? 1 : 0; //pageSize미만의 요소를 담는 페이지

@@ -24,7 +24,24 @@ export const getProduct = async (id) => {
     alert(e);
   }
 };
-export const createProduct = async (name, description, price, tags, images) => {
+
+//스프린트5
+export const createProduct = async (
+  name,
+  description,
+  price,
+  tags = [],
+  images = "default",
+) => {
+  //이미지는 들어오지 않으면, default값으로 저장됨. (기본 이미지를 띄워주기.)
+  //TODO: default를 상수로 빼기
+
+  //유효성 검사 (간단히)
+  if (name.trim() === "" || description.trim() === "" || price.trim() === "") {
+    //TODO: 에러 상수 목록을 만들기.
+    throw new Error("상품명, 상품 설명, 가격은 필수 입력 사항입니다.");
+  }
+
   const requestBody = {
     name,
     description,
@@ -43,11 +60,12 @@ export const createProduct = async (name, description, price, tags, images) => {
     if (!response.ok) throw new Error(`에러 발생: ${response.status}`);
     const result = await response.json();
     console.log(`POST: products =>`, result);
-    return result;
+    return result; //여기에서 반환!
   } catch (e) {
     alert(e);
   }
 };
+
 export const patchProduct = async (modifiedProduct, id) => {
   try {
     const response = await fetch(`${BASE_URL_PRODUCTS}/${id}`, {

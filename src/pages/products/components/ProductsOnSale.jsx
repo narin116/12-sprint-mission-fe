@@ -16,7 +16,7 @@ const ProductsOnSale = ({ pCol }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:4000/products?_page=${page}&_per_page=${pageSize}&_sort=-${orderBy}&name:contains=${keyword}`,
+        `http://localhost:3000/products?_page=${page}&_per_page=${pageSize}&_sort=-${orderBy}&name:contains=${keyword}`,
       );
       const result = await response.json();
       setProducts(result.data);
